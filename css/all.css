@@ -1,0 +1,385 @@
+/* ========== import font start ========== */
+@font-face {
+	font-family: "game over";
+	src: url("/font/gameovercre1.ttf");
+}
+@font-face {
+	font-family: "Press Start 2P";
+	src: url("/font/PressStart2P-Regular.ttf");
+}
+@font-face {
+	font-family: "VT323";
+	src: url("/font/VT323-Regular.ttf");
+}
+/* ========== import font end ========== */
+.mt-5{margin-top: 40px;}.mt-8{margin-top: 64px;}.mt-10{margin-top: 80px;}
+.ml-2{margin-left: 16px;}.ml-3{margin-left: 24px;}
+.mr-2{margin-right: 16px;}.mr-3{margin-right: 24px;}
+.pt-5{padding-top: 40px;}.pt-10{padding-top: 80px;}
+.pb-5{padding-bottom: 40px;}
+/* ========== variables start ========== */
+:root{
+	--bg-gray1: #f7f7f7;
+	--bg-gray2: #dfdfdf;
+	--text-gray: rgb(83,83,83);
+	--white: #fdfdfd;}
+/* ========== variables end ========== */
+
+/* ========== structure start ========== */
+.vh-100{
+	min-height: 100vh;}
+.d-flex{display: flex;}
+.align-items-center{align-items: center;}
+.justify-content-center{justify-content: center;}
+.text-center{text-align: center;}
+.overflow-hidden{overflow: hidden;}
+/* ========== structure end ========== */
+
+/* ========== color start ========== */
+.bg-1{background-color: var(--bg-gray1);}
+.bg-2{background-color: var(--bg-gray2);}
+.bg-3{background-color: var(--white);}
+.text-gray{color:var(--text-gray);}
+/* ========== color end ========== */
+
+/* ========== main setting ========== */
+html{
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+}
+*, *::before, *::after {box-sizing: border-box;}
+body{
+	text-align: center;
+	color:var(--text-gray);
+}
+h1{
+	font-family: "Press Start 2P";
+	font-size: 80px;
+}
+h2{
+	font-family: "game over";
+	font-size: 56px;
+}
+h3{
+	font-family: "VT323";
+	font-size: 32px;
+}
+p{
+	font-family: "VT323";
+	font-size: 24px;
+}
+/* ========== main setting  ========== */
+
+
+/* ========== header start ========== */
+.header{
+	position: relative;
+}
+.stage{
+	position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#dino{
+	width: 100%;
+	height: 100%;
+}
+#dino:hover{
+	cursor: pointer;
+}
+
+.h1-left{
+	position: absolute;
+    top: 43%;
+    left: 36%;
+	/* left: 24%; */
+    transform: translate(-50%,-50%);
+}
+.h1-right{
+	position: absolute;
+    top: 43%;
+	left: 64%;
+    /* left: 76%; */
+    transform: translate(-50%,-50%);
+}
+.h2-left{
+	position: absolute;
+    top: 57%;
+    left: 32.5%;
+    transform: translate(-50%,-50%);
+}
+.h2-right{
+	position: absolute;
+    top: 57%;
+    left: 65.5%;
+    transform: translate(-50%,-50%);
+}
+.header h2{
+	padding-top: 8px;
+	font-size: 80px;
+}
+
+/* @media (min-width: 360px) and (max-width: 1200px) {
+	h1 {
+	font-size: calc(40px + (80 - 40) * ((100vw - 360px) / (1200 - 360)));
+	}
+	.h1-left{
+		left: calc(24% + (36% - 24%) * ((100vw - 360px) / (1200 - 360)));
+	}
+	.h1-right{
+		left: calc(76% - (76% - 64%) * ((100vw - 360px) / (1200 - 360)));
+	}
+	.header h2 {
+		font-size: calc(24px + (80 - 24) * ((100vw - 360px) / (1200 - 360)));
+		}
+} */
+/* ========== header end ========== */
+
+/* ========== about start ========== */
+.about_card{
+	width: 200px;
+	height: 300px;
+	border-radius: 10px;
+}
+.about .img_box{
+	width: 120px;
+	height: 160px;
+	border:2px solid black;
+	background-size: 120px 160px;
+	background-repeat: no-repeat;
+	margin: 30px auto 20px auto;
+}
+.about .img_box img{
+	width: 80px;
+	height: 80px;
+}
+.about .img_box img:hover{
+	transform: scale(1.3);
+}
+/* ========== about end ========== */
+
+/* ========== skill start ========== */
+.skill .slide_container .slide{
+	height: 40px;
+	width: 40px;
+	border-radius: 2px;
+	margin-left: 8px;
+	margin-right : 8px;
+}
+.skill .slide_container .slide img{
+	height: 25px;
+	width: 25px;
+	filter: grayscale(100%) blur(0.5px);
+}
+/* ========== skill end ========== */
+
+/* ========== work start ========== */
+.card_container{
+	
+	height: 300px;
+}
+.work_card{
+	width: 200px;
+	height: 200px;
+	border-radius: 5px;
+	position: relative;
+}
+.work .work_card:hover{
+	height: 240px;
+}
+.work h3{
+	background-color: var(--bg-gray2);
+}
+.work .work_card .img_box2{
+	position: relative;
+	width: 160px;
+	height: 160px;
+	margin: 16px auto 16px auto;
+	border: 1px solid black;
+}
+.work .work_card .img_box2 img{
+	width: 80px;
+	height: 80px;
+	margin: 24px auto 16px auto;
+	position: relative;
+}
+.work .work_card .content_box{
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	width: 160px;
+	text-align: center;
+	visibility: hidden;
+	opacity: 0;
+}
+.work .work_card:hover .content_box{
+	visibility: visible;
+	opacity: 1;
+}
+.work .work_card p{
+	
+	font-size: 16px;
+}
+/* ========== work end ========== */
+
+/* ========== contact start ========== */
+.contact{
+	text-align: center; 
+	height:100vh;
+	background-color: #f7f7f7;
+	overflow: hidden;
+}
+
+.contact h1{
+	font-family: "game over";
+	color: rgb(83,83,83);
+	font-size: 56px;
+	padding-top: 80px;
+	padding-bottom: 48px;
+	display: block;
+}
+
+.contact .list{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 64px;
+}
+.contact .list li{
+	padding: 8px 8px;
+	display: block;
+}
+.contact .list a img{
+	height: 16px;
+	width: 16px;
+}
+.contact .text_show{
+	background-color: var(--bg-gray2);
+	display: none;
+}
+.contact .text_show h3{
+	text-decoration: underline;
+	font-size: 48px;
+}
+
+/* ========== contact end ========== */
+
+
+
+/* ========== scroll bar start ========== */
+::-webkit-scrollbar{
+	width: 0;
+}
+#progress_bar{
+	z-index: 3;
+	position: fixed;
+	right: 0;
+	width: 8px;
+	height: 100%;
+	background: rgb(177, 177, 177);
+}
+#progress_bar:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+#progress_bar:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/* ========== scroll bar end ========== */
+
+/* ========== hover button start ========== */
+#bird{
+	z-index: 10; 
+	position: fixed; 
+	right: 3%; 
+	top: 86%;
+	height: 60px;
+	width: 60px;
+}
+#bird_click{
+	z-index: 10;
+	position: fixed;
+	right: 4%; 
+	top: 82%;
+	display: none;
+}
+#bird:hover{
+	cursor: pointer;
+}
+/* ========== hover button end ========== */
+
+/* ========== hover button end ========== */
+.menu-btn{
+	z-index: 1000;
+	position: fixed;
+	left: 24px;
+	top: 24px;
+	cursor: pointer;
+}
+
+.menu{
+	z-index: 999;
+	position: fixed;
+	left: 16px;
+	top: 16px;
+	background-color: #fff;
+	font-family: "VT323";
+	font-size: 32px;
+	padding-top: 32px;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-bottom: 16px;
+	border-radius: 8px;
+	border: 1px solid black;
+	display: none;
+}
+.menu a{
+	display: block;
+	color: var(--text-gray);
+	text-decoration: none;
+}
+
+.menu a .active{
+	color: black;
+}
+
+/* ========== hover button end ========== */
+#dino_loading{
+	position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#loading{
+	z-index: 9999;
+    background: var(--bg-gray1);
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.playing{
+	display: block;
+}
+.finished{
+	display: none;
+}
+#loading_text{
+	position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
