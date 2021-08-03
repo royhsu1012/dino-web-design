@@ -12,9 +12,11 @@ Hi! I'm Roy. I'm looking for a job.
     <title>Roy Hsu</title>
     <link rel="icon" href="/images/favicon.ico"/>
     <link rel="stylesheet" href="css/reset.css">
+    <link href="css/lightbox.css" rel="stylesheet" />
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="css/all.css">
 </head>
 <body>
@@ -94,60 +96,34 @@ Hi! I'm Roy. I'm looking for a job.
     <div class="skill vh-100 text-center bg-1">
         <h2 class="pt-10">MY SKILLS</h2>
         <p class="pt-5">I am good at html, css, javascript, Bootstrap, Vue.js, etc...</p>
-        <!-- Carousel  -->
-        <div class="slide_container d-flex justify-content-center pt-10">
-            <div class="slide d-flex align-items-center justify-content-center bg-3">
-                <img  alt="HTML5" src="/images/skill/html.png" />
-            </div>
-            <div class="slide d-flex align-items-center justify-content-center bg-3">
-                <img  alt="CSS3" src="/images/skill/css.png" />
-            </div>
-            <div class="slide d-flex align-items-center justify-content-center bg-3">
-                <img  alt="JavaScript" src="/images/skill/javascript.png" />
-            </div>
-            <div class="slide d-flex align-items-center justify-content-center bg-3">
-                <img alt="sass"  src="/images/skill/sass.png"/>
-            </div>
-            <div class="slide d-flex align-items-center justify-content-center bg-3">
-                <img alt="jquery"  src="/images/skill/jquery.png"/>
-            </div>
-            <div class="slide d-flex align-items-center justify-content-center bg-3">
-                <img alt="bootstrap"  src="/images/skill/bootstrap.png"/>
-            </div>
-            <div class="slide d-flex align-items-center justify-content-center bg-3">
-                <img alt="vue"  src="/images/skill/vue.png"/>
-            </div>
-            <div class="slide d-flex align-items-center justify-content-center bg-3">
-                <img alt="react"  src="/images/skill/react.png"/>
-            </div>
-            <div class="slide d-flex align-items-center justify-content-center bg-3">
-                <img alt="angular"  src="/images/skill/angular.png"/>
+        <!-- Swiper -->
+        
+        <div class="swiper-container swiper1 mt-8">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img alt="HTML5" src="/images/skill/html.png" /></div>
+                <div class="swiper-slide"><img alt="HTML5" src="/images/skill/html.png" /></div>
+                <div class="swiper-slide"><img alt="CSS3" src="/images/skill/css.png" /></div>
+                <div class="swiper-slide"><img alt="JavaScript" src="/images/skill/javascript.png" /></div>
+                <div class="swiper-slide"><img alt="sass"  src="/images/skill/sass.png"/></div>
+                <div class="swiper-slide"><img alt="jquery"  src="/images/skill/jquery.png"/></div>
+                <div class="swiper-slide"><img alt="bootstrap"  src="/images/skill/bootstrap.png"/></div>
+                <div class="swiper-slide"><img alt="vue"  src="/images/skill/vue.png"/></div>
+                <div class="swiper-slide"><img alt="react"  src="/images/skill/react.png"/></div>
+                <div class="swiper-slide"><img alt="angular"  src="/images/skill/angular.png"/></div>
             </div>
         </div>
-        <div class="slide_container slide_container d-flex justify-content-center pt-5">
-            <div class="slide d-flex align-items-center justify-content-center bg-3">
-                <img  alt="Node"  src="/images/skill/nodejs.png" />
+
+        <div class="swiper-container swiper2 mt-5">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img alt="Node"  src="/images/skill/nodejs.png" /></div>
+                <div class="swiper-slide"><img alt="SQL"  src="/images/skill/sql.png" /></div>
+                <div class="swiper-slide"><img alt="MySQL"  src="/images/skill/mysql.png" /></div>
+                <div class="swiper-slide"><img alt="MongoDB"  src="/images/skill/mongodb.png" /></div>
+                <div class="swiper-slide"><img alt="rails"  src="/images/skill/rails.png" /></div>
+                <div class="swiper-slide"><img alt="express"  src="/images/skill/express.png" /></div>
+                <div class="swiper-slide"><img alt="python"  src="/images/skill/python.png" /></div>
+                <div class="swiper-slide"><img alt="django"  src="/images/skill/django.png" /></div>
             </div>
-            <div class="slide d-flex align-items-center justify-content-center bg-3">
-                <img  alt="SQL"  src="/images/skill/sql.png" />
-            </div>
-            <div class="slide d-flex align-items-center justify-content-center bg-3">
-                <img alt="MySQL"  src="/images/skill/mysql.png" />
-            </div>
-            <div class="slide d-flex align-items-center justify-content-center bg-3">
-                <img alt="MongoDB"  src="/images/skill/mongodb.png" />
-            </div>
-            <div class="slide d-flex align-items-center justify-content-center bg-3">
-                <img alt="rails"  src="/images/skill/rails.png" />
-            </div>
-            <div class="slide d-flex align-items-center justify-content-center bg-3">
-                <img alt="express"  src="/images/skill/express.png" />
-            </div>
-            <div class="slide d-flex align-items-center justify-content-center bg-3">
-                <img alt="python"  src="/images/skill/python.png" />
-            </div>
-            <div class="slide d-flex align-items-center justify-content-center bg-3">
-                <img alt="django"  src="/images/skill/django.png" /></div>
         </div>
     </div>
     <!-- skills end -->
@@ -159,7 +135,7 @@ Hi! I'm Roy. I'm looking for a job.
         <div class="card_container d-flex align-items-center justify-content-center">
             <div class="work_card ml-2 mr-2 mt-8 bg-3">
                 <div class="img_box2">
-                    <img src="/images/ghosts.jpg" alt="">
+                    <a href="/images/ghosts.jpg" data-lightbox="image-1" data-title="My Work 1"><img src="/images/ghosts.jpg" alt="work1"></a>
                     <h3>WORK 1</h3>
                 </div>
                 <div class="content_box">   
@@ -168,7 +144,7 @@ Hi! I'm Roy. I'm looking for a job.
             </div>
             <div class="work_card ml-2 mr-2 mt-8 bg-3">
                 <div class="img_box2">
-                    <img src="/images/ghosts.jpg" alt="">
+                    <a href="/images/ghosts.jpg" data-lightbox="image-2" data-title="My Work 2"><img src="/images/ghosts.jpg" alt="work2"></a>
                     <h3>WORK 2</h3>
                 </div>
                 <div class="content_box">
@@ -177,7 +153,7 @@ Hi! I'm Roy. I'm looking for a job.
             </div>
             <div class="work_card ml-2 mr-2 mt-8 bg-3">
                 <div class="img_box2">
-                    <img src="/images/ghosts.jpg" alt="">
+                    <a href="/images/ghosts.jpg" data-lightbox="image-3" data-title="My Work 3"><img src="/images/ghosts.jpg" alt="work3"></a>
                     <h3>WORK 3</h3>
                 </div>
                 <div class="content_box">   
@@ -186,7 +162,7 @@ Hi! I'm Roy. I'm looking for a job.
             </div>
             <div class="work_card ml-2 mr-2 mt-8 bg-3">
                 <div class="img_box2">
-                    <img src="/images/ghosts.jpg" alt="">
+                    <a href="/images/ghosts.jpg" data-lightbox="image-4" data-title="My Work 4"><img src="/images/ghosts.jpg" alt="work4"></a>
                     <h3>WORK 4</h3>
                 </div>
                 <div class="content_box">
@@ -221,6 +197,8 @@ Hi! I'm Roy. I'm looking for a job.
     <!-- ====================== -->
     <!-- script -->
     <script src="script/jquery-3.6.0.js"></script>
+    <script src="script/lightbox.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="script/script.js"></script>
     
 </body>

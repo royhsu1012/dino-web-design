@@ -1,4 +1,25 @@
 // ====================
+//載入頁面動畫
+$(document).ready(function(){
+    $('#loading').show();
+    window.setTimeout(function(){
+        $('#loading').fadeOut("slow");}, 2000);
+});
+// 頁面動畫 loading (...)的顯示
+let originalText = $("#loading_text").text(),
+i  = 0;
+setInterval(function() {
+    $("#loading_text").append(".");
+    i++;
+    if(i == 4)
+    {
+        $("#loading_text").html(originalText);
+        i = 0;
+    }
+}, 300);
+// ====================
+
+// ====================
 // 標題的小恐龍動畫
 $(document).ready(function(){
     // hover變換圖片
@@ -47,10 +68,15 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $('.menu a').hover(function(event)
-    {
-        event.preventDefault();
-        $('.menu a').hover.toggleClass('active');
-        // .parents().siblings().find('a').removeClass('active');
+    {   
+        $('.menu a').on('mouseenter', function(){
+            event.preventDefault();
+            $(this).addClass('active');
+        });
+        $('.menu a').on('mouseleave', function(){
+            event.preventDefault();
+            $(this).removeClass('active');
+        });
     });
 });
 // ====================
@@ -58,10 +84,10 @@ $(document).ready(function(){
 // ====================
 // 右下角的懸浮按鈕
 $(document).ready(function(){
-    $("#bird").on('mouseover', function(){
+    $("#bird").on('mouseenter', function(){
         $('#bird_click').show();
     });
-    $("#bird").on('mouseout', function(){
+    $("#bird").on('mouseleave', function(){
         $('#bird_click').hide();
     });
 });
@@ -75,25 +101,44 @@ $(document).ready(function(){
 // ====================
 
 // ====================
-//載入頁面動畫
-$(document).ready(function(){
-    $('#loading').show();
-    window.setTimeout(function(){
-        $('#loading').fadeOut("slow");}, 2000);
-});
-// 頁面動畫 loading (...)的顯示
-let originalText = $("#loading_text").text(),
-i  = 0;
-setInterval(function() {
-    $("#loading_text").append(".");
-    i++;
-    if(i == 4)
-    {
-        $("#loading_text").html(originalText);
-        i = 0;
-    }
-}, 300);
+// swipper的實作
+// swipper2有時候會突然加速?
+
+var swiperOptions1 = {
+    loop: true,
+    freeMode: true,
+    spaceBetween: 25,
+    grabCursor: true,
+    slidesPerView: 7,
+    loop: true,
+    autoplay: {
+        delay: 1,
+        disableOnInteraction: true
+    },
+    freeMode: true,
+    speed: 5000,
+    freeModeMomentum: false
+};
+var swiperOptions2 = {
+    loop: true,
+    freeMode: true,
+    spaceBetween: 25,
+    grabCursor: true,
+    slidesPerView: 7,
+    loop: true,
+    autoplay: {
+        delay: 1,
+        reverseDirection: true,
+        disableOnInteraction: true
+    },
+    freeMode: true,
+    speed: 5000,
+    freeModeMomentum: false
+};
+var swiper1 = new Swiper(".swiper1", swiperOptions1);
+var swiper2 = new Swiper(".swiper2", swiperOptions2);
 // ====================
+
 
 // ====================
 //contact hover在icon上 下方換文字
@@ -124,4 +169,3 @@ $(document).ready(function(){
         $('.text_show h3').text('Linkedin')
     });
 });
-// ====================
